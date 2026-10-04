@@ -1,4 +1,4 @@
-export const APP_NAME = 'Portfolio'
+export const APP_NAME = 'Bckducc'
 
 export const ROUTES = {
   home: '/',

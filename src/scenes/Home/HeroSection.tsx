@@ -1,11 +1,9 @@
 import { Col, Flex, Row, Typography } from 'antd'
+import { FacebookFilled, GithubFilled } from '@ant-design/icons'
 import { Component } from 'react'
-import { ImagePlaceholder } from '../../components/ImagePlaceholder'
-import { LinkButton } from '../../components/LinkButton'
 import { Section } from '../../components/Section'
-import { ROUTES } from '../../lib/appConfig'
 
-const { Title } = Typography
+const { Paragraph, Text, Title } = Typography
 
 export class HeroSection extends Component {
   render() {
@@ -14,20 +12,36 @@ export class HeroSection extends Component {
         <Row gutter={[48, 32]} align="middle">
           <Col xs={24} md={14}>
             <Title level={1} className="hero__title">
-              <span className="hero__greeting">Portfolio</span>
+              <span className="hero__greeting">Anh Duc</span>
             </Title>
-            <Flex className="hero__actions" wrap gap={12}>
-              <LinkButton type="primary" size="large" to={ROUTES.contact}>
-                Get In Touch
-              </LinkButton>
-              <LinkButton size="large" to={ROUTES.projects}>
-                Browse Projects
-              </LinkButton>
+            <Text className="hero__role">Software Engineer / Content Creator</Text>
+            <Paragraph className="hero__description">
+              I love building useful digital products and sharing ideas and technological knowledge through creative content.
+            </Paragraph>
+            <Flex className="hero__socials" align="center" gap={12}>
+              <a
+                className="hero__social-link"
+                href="https://www.facebook.com/bckducc"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+              >
+                <FacebookFilled aria-hidden="true" />
+              </a>
+              <a
+                className="hero__social-link"
+                href="https://github.com/bckducc"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <GithubFilled aria-hidden="true" />
+              </a>
             </Flex>
           </Col>
 
           <Col xs={24} md={10}>
-            <ImagePlaceholder className="hero__photo" ratio="1 / 1" label="Profile image" />
+            <img className="hero__photo" src="/logo_header.png" alt="View About Detail" />
           </Col>
         </Row>
       </Section>

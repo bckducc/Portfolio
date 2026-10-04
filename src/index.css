@@ -57,18 +57,81 @@ img {
   place-items: center;
   border: 1px dashed currentColor;
 }
+.app-header {
+  background: #fff;
+  border-bottom: 1px solid #ededed;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-header > .container {
+  max-width: 980px;
+}
+
 .app-header__inner {
-  min-height: var(--header-height);
+  min-height: 64px;
+}
+
+.app-header__brand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  line-height: 0;
+}
+
+.app-header__brand img {
+  max-width: none;
+}
+
+.app-header__nav {
+  margin-left: auto;
 }
 
 .app-header__list {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 34px;
+}
+
+.app-header__link {
+  display: inline-flex;
+  min-height: 64px;
+  align-items: center;
+  color: #202020;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.15px;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.app-header__link:hover,
+.app-header__link.is-active {
+  color: #818181;
+}
+
+.app-header__link--cta {
+  margin-left: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.app-header__link--cta:hover,
+.app-header__link--cta.is-active {
+  transform: none;
+  background: transparent;
+  color: #818181;
+}
+
+.app-header__link--cta::after {
+  display: none;
 }
 
 .app-header__toggle {
   display: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .app-footer {
@@ -201,12 +264,14 @@ img {
 
   .app-header__toggle {
     display: inline-flex;
+    flex: 0 0 auto;
   }
 
   .app-header__nav {
     display: none;
     flex-basis: 100%;
-    padding-bottom: 16px;
+    margin: 0;
+    padding-bottom: 12px;
   }
 
   .app-header--open .app-header__nav {
@@ -215,8 +280,22 @@ img {
 
   .app-header__list {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .app-header__link {
+    min-height: 42px;
+    padding-inline: 8px;
+    font-size: 16px;
+  }
+
+  .app-header__link--cta {
+    margin: 0;
+  }
+
+  .app-header__inner {
+    gap: 8px 16px;
   }
 
   .timeline__item {

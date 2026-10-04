@@ -2,7 +2,7 @@ import { Component } from 'react'
 import { Button, Flex } from 'antd'
 import { Container } from '../../Container'
 import { Link } from '../../Router/Link'
-import { APP_NAME, NAV_ITEMS, ROUTES } from '../../../lib/appConfig'
+import { NAV_ITEMS, ROUTES } from '../../../lib/appConfig'
 
 type HeaderState = {
   open: boolean
@@ -23,7 +23,13 @@ export class Header extends Component<Record<string, never>, HeaderState> {
         <Container>
           <Flex className="app-header__inner" align="center" justify="space-between" wrap gap={16}>
             <Link className="app-header__brand" to={ROUTES.home} onClick={this.closeMenu}>
-              {APP_NAME}
+              <img
+                src="/logo_header.png"
+                alt="BCKDUCC"
+                width="96"
+                height="53"
+                style={{ display: 'block', width: 96, height: 53, objectFit: 'contain' }}
+              />
             </Link>
 
             <Button

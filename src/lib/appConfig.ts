@@ -1,5 +1,3 @@
-export const APP_NAME = 'Bckducc'
-
 export const ROUTES = {
   home: '/',
   projects: '/projects',
@@ -18,7 +16,7 @@ export type NavItem = {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', to: ROUTES.home },
-  { label: 'Projects', to: ROUTES.projects },
+  { label: 'Project', to: ROUTES.projects },
   { label: 'About', to: ROUTES.about },
   { label: 'Contact', to: ROUTES.contact, cta: true },
 ]

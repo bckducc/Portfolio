@@ -3,7 +3,7 @@ import { Component } from 'react'
 import { Container } from '../../Container'
 import { LinkButton } from '../../LinkButton'
 import { Link } from '../../Router/Link'
-import { APP_NAME, NAV_ITEMS, ROUTES } from '../../../lib/appConfig'
+import { NAV_ITEMS, ROUTES } from '../../../lib/appConfig'
 
 const { Title } = Typography
 
@@ -42,7 +42,7 @@ export class Footer extends Component {
 
           <Flex className="app-footer__bottom" justify="space-between" wrap gap={8}>
             <span>© {new Date().getFullYear()} All Rights Reserved.</span>
-            <span>Made by {APP_NAME}</span>
+            <span>Made by BCKDUCC</span>
           </Flex>
         </Container>
       </footer>
